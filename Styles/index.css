@@ -1,5 +1,27 @@
+/*
+Pink: #eb4f90 
+
+*/
+
+@font-face {
+    font-family: 'MagdaClean';
+    src: url('Fonts/MagdaClean.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LidoSTF';
+    src: url('Fonts/LidoSTF.ttf') format('truetype');
+    font-style: normal;
+}
+
+
 *{
     margin: 0;
+}
+
+body{
+    background-image: url('');
 }
 
 
@@ -8,6 +30,34 @@ header{
     width: 1200px;
     height: 120px;
     background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 120px;
+    width: 300px;
+}
+
+#logoimage{
+    height: 120px;
+    width: auto;
+}
+
+#menuoptions{
+    position: relative;
+    right: 0;
+}
+
+.option{
+    text-decoration: none;
+    font-family: "LidoSTF";
+    color: #eb4f90;
+    font-size: 26pt;
+    line-height: 120px;
+    text-shadow: 2px 2px 2px white;
+    margin-right: 40px;
 }
 
 #main{
@@ -16,3 +66,4 @@ header{
     height: 700px;
     background-color: blue;
 }
+

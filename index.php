@@ -9,7 +9,10 @@
 <body>
     <header>
         <div id="logo">
-            <img src="" alt="">
+            <img id="logoimage" src="Images/logo.png" alt="">
+        </div>
+        <div id="menuoptions">
+            <a href="" class="option" id="about">About</a>
         </div>
     </header>
 
