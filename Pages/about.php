@@ -1,10 +1,15 @@
+<?php 
+
+    $coutinho = "imbativel na busca";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/index.css">
-    <script type="text/javascript" src="../Scripts/home.js"></script>    
     <title>Home - LLyrics</title>
 </head>
 <body>
@@ -18,6 +23,7 @@
     </header>
 
     <div id="main">
+        <h1>About <?= $coutinho?> </h1>
 
     </div>
 

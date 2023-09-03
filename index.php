@@ -7,8 +7,8 @@ switch ($url) {
         include 'Pages/home.php';
         break;
 
-    case '/lista':
-        include 'View/modules/Game/Home.php';
+    case '/about':
+        include 'Pages/about.php';
         break;
     
     default:
