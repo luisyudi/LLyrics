@@ -18,7 +18,7 @@
     </header>
 
     <div id="main">
-
+        <div class="button"><p class="button-text">Start</p></div>
     </div>
 
 

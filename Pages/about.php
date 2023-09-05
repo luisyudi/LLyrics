@@ -14,11 +14,13 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img id="logoimage" src="Images/logo.png" alt="">
-        </div>
-        <div id="menuoptions">
-            <a href="" class="option" id="about">About</a>
+        <div id="menu">
+            <div id="logo">
+                <img id="logoimage" src="Images/logo.png" alt="">
+            </div>
+            <div id="menuoptions">
+                <a href="" class="option" id="about">About</a>
+            </div>
         </div>
     </header>
 
