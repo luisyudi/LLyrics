@@ -21,7 +21,7 @@ Pink: #eb4f90
 }
 
 body{
-    background-image: url('../Images/smallpattern.png');
+    background-image: url('../Images/smallpattern2.png');
     background-size: 6%;
 }
 
@@ -67,7 +67,7 @@ header{
     margin: 0 auto;
     width: 1200px;
     height: 1000px;
-    background-color: #FAF9F6;
+    background-color: #EBDE67;
 }
 
 
@@ -82,7 +82,7 @@ header{
 
 .button-text{
     text-align: center;
-    color: white;
+    color:white;
     font-family: 'MagdaClean';
     line-height: 50px;
     font-size: 18px;
