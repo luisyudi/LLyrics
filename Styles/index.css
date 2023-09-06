@@ -48,12 +48,12 @@ header{
     width: auto;
 }
 
-#menuoptions{
+#options-menu{
     position: relative;
     right: 0;
 }
 
-.option{
+.about{
     text-decoration: none;
     font-family: "LidoSTF";
     color: #eb4f90;
@@ -69,6 +69,13 @@ header{
     height: 1000px;
     background-color: #EBDE67;
 }
+
+
+.option-image{
+    height: 60px;
+    width: auto;
+}
+
 
 
 .button{
@@ -87,4 +94,6 @@ header{
     line-height: 50px;
     font-size: 18px;
 }
+
+
 
