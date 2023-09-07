@@ -70,13 +70,74 @@ header{
     background-color: #EBDE67;
 }
 
+#panel-box{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: auto;
+}
+
+.group-box{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width:800px;
+    height: 200px;
+    border-radius: 25px;
+    border: solid white 2px;
+}
+
+.group-settings-box{
+    margin-left: 55px;
+}
+
+.option-text, .option-solo, .option-other{
+    font-family: "MagdaClean";
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.subunit-box{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.solo-box{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 170px;
+}
+
+.option-solo, .option-other{
+    margin: 0 0 0 8px;
+    line-height: 40px;
+}
+
+#group-box-muse{
+    background-color: #eb4f90;
+    margin-top: 50px;
+}
 
 .option-image{
-    height: 60px;
+    height: 40px;
     width: auto;
 }
 
+.option-box-subunit{
+    margin-right: 20px;
+}
 
+.option-image-main{
+    margin: 75px 0 0 60px;
+    display: block;
+    height: 50px;
+    width: auto;
+}
 
 .button{
     width: 200px;

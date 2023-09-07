@@ -19,79 +19,82 @@
 
     <div id="main">
         <div id="panel-box">
-            <div class="group-box">
+            <div class="group-box" id="group-box-muse">
                 <div class="option-box">
-                    <img src="../Images/Icons/muse.png" alt="" class="option-image">
-                    <input type="checkbox" id="muse" name="muse">
+                    <img src="../Images/Icons/muse.png" alt="" class="option-image option-image-main">
+                </div>
+                <div class="group-settings-box">
+                    <p class="option-text">Subunits:</p>
+                    <div class="subunit-box">
+                        <div class="option-box option-box-subunit">
+                            <img src="../Images/Icons/bibi.png" alt="" class="option-image">
+                        </div>
+                        <div class="option-box option-box-subunit">
+                            <img src="../Images/Icons/lilywhite.png" alt="" class="option-image">
+                        </div>
+                        <div class="option-box option-box-subunit">
+                            <img src="../Images/Icons/printemps.png" alt="" class="option-image">
+                        </div>
+                    </div>
+                    <div class="option-box">
+                        <img src="../Images/Icons/arise.png" alt="" class="option-image">
+                    </div>
+                    <div class="subunit-box">
+                        <div class="option-box solo-box">
+                            <input type="checkbox">
+                            <p class="option-solo">Solo Songs</p>
+                        </div>
+                        <div class="option-box solo-box">
+                            <input type="checkbox">
+                            <p class="option-other">Other</p>
+                        </div>
+                    </div>
+                        
                 </div>
 
-                <div class="option-box">
-                    <img src="../Images/Icons/bibi.png" alt="" class="option-image">
-                    <input type="checkbox" id="bibi" name="bibi">
-                </div>
-
-                <div class="option-box">
-                    <img src="../Images/Icons/lilywhite.png" alt="" class="option-image">
-                    <input type="checkbox" id="lily white" name="lily white">
-                </div>
-
-                <div class="option-box">
-                    <img src="../Images/Icons/printemps.png" alt="" class="option-image">
-                    <input type="checkbox" id="printemps" name="printemps">
-                </div>
             </div>
 
-            <div class="group-box">
+            <div class="group-box" id="group-box-aqours">
                 <div class="option-box">
-                    <img src="../Images/Icons/aqours.png" alt="" class="option-image">
-                    <input type="checkbox" id="aqours" name="aqours">
+                    <img src="../Images/Icons/aqours.png" alt="" class="option-image option-image-main">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/azalea.png" alt="" class="option-image">
-                    <input type="checkbox" id="azalea" name="azalea">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/cyaron.png" alt="" class="option-image">
-                    <input type="checkbox" id="cyaron" name="cyaron">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/guiltykiss.png" alt="" class="option-image">
-                    <input type="checkbox" id="guilty kiss" name="guilty kiss">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/saintsnow.png" alt="" class="option-image">
-                    <input type="checkbox" id="saint snow" name="saint snow">
                 </div>
             </div>
 
-            <div class="group-box">
+            <div class="group-box" id="group-box-nijigasaki">
                 <div class="option-box">
-                    <img src="../Images/Icons/nijigasaki.png" alt="" class="option-image">
-                    <input type="checkbox" id="nijigasaki" name="nijigasaki">
+                    <img src="../Images/Icons/nijigasaki.png" alt="" class="option-image option-image-main">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/azuna.png" alt="" class="option-image">
-                    <input type="checkbox" id="azuna" name="azuna">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/diverdiva.png" alt="" class="option-image">
-                    <input type="checkbox" id="diverdiva" name="diverdiva">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/qu4rtz.png" alt="" class="option-image">
-                    <input type="checkbox" id="qu4rtz" name="qu4rtz">
                 </div>
 
                 <div class="option-box">
                     <img src="../Images/Icons/r3birth.png" alt="" class="option-image">
-                    <input type="checkbox" id="r3birth" name="r3birth">
                 </div>
 
                 <div class="option-box" id="nijigasaki-solo-box">
