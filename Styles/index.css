@@ -66,7 +66,7 @@ header{
 #main{
     margin: 0 auto;
     width: 1200px;
-    height: 1000px;
+    height: 1500px;
     background-color: #EBDE67;
 }
 
@@ -88,9 +88,25 @@ header{
     border: solid white 2px;
 }
 
-.group-settings-box{
-    margin-left: 55px;
+#group-box-muse{
+    background-color: #FF468C;
+    margin-top: 50px;
 }
+
+#group-box-aqours{
+    background-color: #00C8FA;
+}
+
+#group-box-nijigasaki{
+    background-color: #fab920;
+}
+
+#group-box-liella{
+    background-color: #C266CC;
+}
+
+
+
 
 .option-text, .option-solo, .option-other{
     font-family: "MagdaClean";
@@ -118,14 +134,18 @@ header{
     line-height: 40px;
 }
 
-#group-box-muse{
-    background-color: #eb4f90;
-    margin-top: 50px;
-}
 
 .option-image{
     height: 40px;
     width: auto;
+}
+
+.option-box-main{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .option-box-subunit{
@@ -133,10 +153,31 @@ header{
 }
 
 .option-image-main{
-    margin: 75px 0 0 60px;
     display: block;
-    height: 50px;
+    height: 80px;
     width: auto;
+    margin: 0 auto;
+}
+
+.liella-image{
+    height: 70px;
+}
+
+.nijigasaki-option{
+    height: 40px;
+    width: 40px;
+    margin-right: 3px;
+    border-radius: 30px;
+    border: solid white 1px;
+    background-color: #FBD06C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nijigasaki-solo-image{
+    width: 30px;
+    height: auto;
 }
 
 .button{
