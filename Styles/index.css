@@ -138,6 +138,7 @@ header{
 .option-image{
     height: 40px;
     width: auto;
+    cursor: pointer;
 }
 
 .option-box-main{
@@ -163,6 +164,10 @@ header{
     height: 70px;
 }
 
+.group-settings-box-liella{
+    margin: 25px 0;
+}
+
 .nijigasaki-option{
     height: 40px;
     width: 40px;
@@ -173,6 +178,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .nijigasaki-solo-image{
