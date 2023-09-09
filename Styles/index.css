@@ -65,16 +65,17 @@ header{
 
 #main{
     margin: 0 auto;
-    width: 1200px;
+    width: 1300px;
     height: 1500px;
     background-color: #EBDE67;
 }
 
 #panel-box{
     display: flex;
-    flex-direction: column;
-    width: 1200px;
+    flex-wrap: wrap;
+    width: 1250px;
     height: auto;
+    margin: 0 auto;
 }
 
 .group-box{
@@ -82,8 +83,8 @@ header{
     flex-direction: row;
     margin: 0 auto;
     margin-bottom: 50px;
-    width:800px;
-    height: 200px;
+    width:590px;
+    height: 160px;
     border-radius: 25px;
     border: solid white 2px;
 }
@@ -94,6 +95,7 @@ header{
 }
 
 #group-box-aqours{
+    margin-top: 50px;
     background-color: #00C8FA;
 }
 
@@ -104,9 +106,6 @@ header{
 #group-box-liella{
     background-color: #C266CC;
 }
-
-
-
 
 .option-text, .option-solo, .option-other{
     font-family: "MagdaClean";
@@ -126,7 +125,7 @@ header{
     display: flex;
     flex-direction: row;
     height: 40px;
-    width: 170px;
+    width: 160px;
 }
 
 .option-solo, .option-other{
@@ -136,14 +135,14 @@ header{
 
 
 .option-image{
-    height: 40px;
+    height: 30px;
     width: auto;
     cursor: pointer;
 }
 
 .option-box-main{
-    height: 200px;
-    width: 250px;
+    height: 160px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,22 +154,22 @@ header{
 
 .option-image-main{
     display: block;
-    height: 80px;
+    height: 60px;
     width: auto;
     margin: 0 auto;
 }
 
 .liella-image{
-    height: 70px;
+    height: 50px;
 }
 
 .group-settings-box-liella{
-    margin: 25px 0;
+    margin: 12px 0;
 }
 
 .nijigasaki-option{
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     margin-right: 3px;
     border-radius: 30px;
     border: solid white 1px;
@@ -182,12 +181,21 @@ header{
 }
 
 .nijigasaki-solo-image{
-    width: 30px;
+    width: 20px;
     height: auto;
 }
 
+#button-box{
+    width: 360px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
 .button{
-    width: 200px;
+    width: 170px;
     height: 50px;
     border: #eb4f90 solid 1px;
     background-color: #f08bb5;

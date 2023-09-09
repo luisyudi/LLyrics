@@ -63,7 +63,6 @@ function loadLocalSettings() {
             $("#"+groups[2][5][index]).css("background-color", "#997F42");
         }
     });
-    console.table(settings);
 }
 loadLocalSettings();
 
