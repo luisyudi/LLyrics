@@ -39,16 +39,16 @@ if (localStorage.getItem("localSettings") === null) {
 }
 
 function loadLocalSettings() {
-    for (let i = 0; i < 4; i++) { //loading all groups except nijigasaki
-        if(i == 2){
+    for (let i = 0; i < 4; i++) { 
+        if(i == 2){ //loading all groups except nijigasaki
             continue;
         } 
         settings[i].forEach((name, index) => {
+            console.table(settings)
             if(name == 0){
                 $("#"+groups[i][index].toString()+"-img").css("filter", "brightness(50%)");
             }else if (name == 1 && (groups[i][index] == "other" || groups[i][index] == "solo") ){
                 $("#"+groups[i][0]+"-"+groups[i][index]).prop("checked", true);
-                console.log("#"+groups[i][0]+"-"+groups[i][index])
             }
         });
     }
@@ -159,3 +159,10 @@ function getNijigasakiSoloSettings(name) {
         }
     }
 }
+
+
+$("#button-settings").on( "click", function() {
+    $('#panel-box').fadeIn(600);
+    $('.settings-background').fadeIn(600);
+    $('#panel-box').css("display","flex");
+});
