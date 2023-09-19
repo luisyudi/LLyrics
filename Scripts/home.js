@@ -162,7 +162,24 @@ function getNijigasakiSoloSettings(name) {
 
 
 $("#button-settings").on( "click", function() {
-    $('#panel-box').fadeIn(600);
-    $('.settings-background').fadeIn(600);
+    $('#panel-box').fadeIn(500);
+    $('#img-exit-settings').fadeIn(500);
+    $('.settings-background').fadeIn(500);
     $('#panel-box').css("display","flex");
+});
+
+$("#img-exit-settings").on( "click", function() {
+    $('#panel-box').fadeOut(0);
+    $('#img-exit-settings').fadeOut(0);
+    $('.settings-background').fadeOut(0);
+    $('#panel-box').css("display","none");
+});
+
+$(document).keyup(function(e) {
+    if (e.key === "Escape") { 
+        $('#panel-box').fadeOut(0);
+        $('#img-exit-settings').fadeOut(0);
+        $('.settings-background').fadeOut(0);
+        $('#panel-box').css("display","none");
+   }
 });

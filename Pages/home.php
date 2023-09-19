@@ -204,7 +204,8 @@
 
        
 
-    <div class="settings-background"><div id="exit-settings"></div></div>
+    <div class="settings-background"></div>
+    <img src="../Images/X.png" alt="" id="img-exit-settings">
     <script type="text/javascript" src="../Scripts/home.js"></script>    
 </body>
 </html>
