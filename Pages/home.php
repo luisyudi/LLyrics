@@ -12,7 +12,7 @@
 <body>
     <header>
         <div id="logo">
-            <img id="logoimage" src="Images/logo.png" alt="">
+            <img id="logo_image" src="Images/logo.png" alt="">
         </div>
         <div id="options-menu">
             <a href="" class="about" id="about">About</a>
@@ -21,39 +21,40 @@
 
     <div id="main">
         <div id="panel-box">
-                <div class="group-box" id="group-box-muse">
-                    <div class="option-box option-box-main">
-                        <img src="../Images/Icons/muse.png" alt="" id="muse-img" class="option-image option-image-main">
+            <!--
+                <div class="group-box" id="group-box--muse">
+                    <div class="option-box option-box--main">
+                        <img src="../Images/Icons/muse.png" alt="" id="muse_img" class="option_image option_image--main">
                     </div>
-                    <div class="group-settings-box group-settings-box-muse">
-                        <p class="option-text">Sub-units:</p>
+                    <div class="group-settings-box group-settings-box--muse">
+                        <p class="option_text">Sub-units:</p>
                         <div class="subunit-box">
-                            <div class="option-box option-box-subunit">
-                                <img src="../Images/Icons/bibi.png" alt="" id="bibi-img" class="option-image">
+                            <div class="option-box option-box--subunit">
+                                <img src="../Images/Icons/bibi.png" alt="" id="bibi_img" class="option_image">
                             </div>
-                            <div class="option-box option-box-subunit">
-                                <img src="../Images/Icons/lilywhite.png" id="lilywhite-img" alt="" class="option-image">
+                            <div class="option-box option-box--subunit">
+                                <img src="../Images/Icons/lilywhite.png" id="lilywhite_img" alt="" class="option_image">
                             </div>
-                            <div class="option-box option-box-subunit">
-                                <img src="../Images/Icons/printemps.png" alt="" id="printemps-img" class="option-image">
+                            <div class="option-box option-box--subunit">
+                                <img src="../Images/Icons/printemps.png" alt="" id="printemps_img" class="option_image">
                             </div>
                         </div>
                         <div class="option-box">
-                            <img src="../Images/Icons/arise.png" alt="" id="arise-img" class="option-image">
+                            <img src="../Images/Icons/arise.png" alt="" id="arise_img" class="option_image">
                         </div>
                         <div class="subunit-box">
                             <div class="option-box solo-box">
-                                <input type="checkbox" id="muse-solo" class="solo">
-                                <p class="option-solo">Solo Songs</p>
+                                <input type="checkbox" id="solo--muse" class="solo">
+                                <p class="label--solo">Solo Songs</p>
                             </div>
                             <div class="option-box solo-box">
-                                <input type="checkbox" id="muse-other" class="other">
-                                <p class="option-other">Other</p>
+                                <input type="checkbox" id="other--muse" class="other">
+                                <p class="label--other">Other</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="group-box" id="group-box-aqours">
                     <div class="option-box option-box-main">
                         <img src="../Images/Icons/aqours.png" alt="" id="aqours-img" class="option-image option-image-main">
@@ -89,39 +90,40 @@
                     </div> 
                 </div>
 
-                <div class="group-box" id="group-box-nijigasaki">
-                    <div class="option-box option-box-main">
-                        <img src="../Images/Icons/nijigasaki.png" alt="" id="nijigasaki-img" class="option-image option-image-main">
+
+                <div class="group-box" id="group-box--nijigasaki">
+                    <div class="option-box option-box--main">
+                        <img src="../Images/Icons/nijigasaki.png" alt="" id="nijigasaki_img" class="option_image option_image--main">
                     </div>
                     <div class="group-settings-box">
-                        <p class="option-text">Sub-units:</p>
+                        <p class="option_text">Sub-units:</p>
                         <div class="subunit-box">
-                            <div class="option-box option-box-subunit">
-                                <img src="../Images/Icons/azuna.png" alt="" id="azuna-img" class="option-image">
+                            <div class="option-box option-box--subunit">
+                                <img src="../Images/Icons/azuna.png" alt="" id="azuna_img" class="option_image">
                             </div>
 
-                            <div class="option-box option-box-subunit">
-                                <img src="../Images/Icons/diverdiva.png" alt="" id="diverdiva-img" class="option-image">
+                            <div class="option-box option-box--subunit">
+                                <img src="../Images/Icons/diverdiva.png" alt="" id="diverdiva_img" class="option_image">
                             </div>
 
-                            <div class="option-box option-box-subunit">
-                                <img src="../Images/Icons/qu4rtz.png" alt="" id="qu4rtz-img" class="option-image">
+                            <div class="option-box option-box--subunit">
+                                <img src="../Images/Icons/qu4rtz.png" alt="" id="qu4rtz_img" class="option_image">
                             </div>
                         </div>
                         <div class="option-box">
-                            <img src="../Images/Icons/r3birth.png" alt="" id="r3birth-img" class="option-image">
+                            <img src="../Images/Icons/r3birth.png" alt="" id="r3birth_img" class="option_image">
                         </div>
                         <div class="subunit-box">
                             <div class="nijigasaki-option" id="ayumu">
-                                <img src="../Images/Icons/ayumu.png" alt="" id="ayumu-img" class="nijigasaki-solo-image">
+                                <img src="../Images/Icons/ayumu.png" alt="" id="ayumu_img" class="nijigasaki-solo_image">
                             </div>
                             
                             <div class="nijigasaki-option" id="kasumi">
-                                <img src="../Images/Icons/kasumi.png" alt="" id="kasumi-img" class="nijigasaki-solo-image">
+                                <img src="../Images/Icons/kasumi.png" alt="" id="kasumi_img" class="nijigasaki-solo_image">
                             </div>
 
                             <div class="nijigasaki-option" id="shizuku">
-                                <img src="../Images/Icons/shizuku.png" alt="" id="shizuku-img" class="nijigasaki-solo-image">
+                                <img src="../Images/Icons/shizuku.png" alt="" id="shizuku_img" class="nijigasaki-solo_image">
                             </div>
 
                             <div class="nijigasaki-option" id="karin">
@@ -193,6 +195,7 @@
                         </div>
                     </div>
                 </div>
+                -->
         </div>
 
 

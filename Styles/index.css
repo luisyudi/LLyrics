@@ -43,7 +43,7 @@ header{
     width: 300px;
 }
 
-#logoimage{
+#logo_image{
     height: 90px;
     width: auto;
 }
@@ -106,25 +106,25 @@ header{
     border: solid white 2px;
 }
 
-#group-box-muse{
+#group-box--muse{
     background-color: #FF468C;
     margin-top: 50px;
 }
 
-#group-box-aqours{
+#group-box--aqours{
     margin-top: 50px;
     background-color: #00C8FA;
 }
 
-#group-box-nijigasaki{
+#group-box--nijigasaki{
     background-color: #fab920;
 }
 
-#group-box-liella{
+#group-box--liella{
     background-color: #C266CC;
 }
 
-.option-text, .option-solo, .option-other{
+.option_text, .label--solo, .label--other{
     font-family: "MagdaClean";
     color: white;
     font-size: 18px;
@@ -145,19 +145,19 @@ header{
     width: 160px;
 }
 
-.option-solo, .option-other{
+.label--solo, .label--other{
     margin: 0 0 0 8px;
     line-height: 40px;
 }
 
 
-.option-image{
+.option_image{
     height: 30px;
     width: auto;
     cursor: pointer;
 }
 
-.option-box-main{
+.option-box--main{
     height: 160px;
     width: 200px;
     display: flex;
@@ -165,11 +165,11 @@ header{
     justify-content: center;
 }
 
-.option-box-subunit{
+.option-box--subunit{
     margin-right: 20px;
 }
 
-.option-image-main{
+.option_image--main{
     display: block;
     height: 60px;
     width: auto;
@@ -197,7 +197,7 @@ header{
     cursor: pointer;
 }
 
-.nijigasaki-solo-image{
+.nijigasaki-solo_image{
     width: 20px;
     height: auto;
 }
