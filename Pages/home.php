@@ -21,12 +21,12 @@
 
     <div id="main">
         <div id="panel-box">
-            <!--
+                <!--
                 <div class="group-box" id="group-box--muse">
                     <div class="option-box option-box--main">
                         <img src="../Images/Icons/muse.png" alt="" id="muse_img" class="option_image option_image--main">
                     </div>
-                    <div class="group-settings-box group-settings-box--muse">
+                    <div class="group-settings-box">
                         <p class="option_text">Sub-units:</p>
                         <div class="subunit-box">
                             <div class="option-box option-box--subunit">
@@ -209,6 +209,7 @@
 
     <div class="settings-background"></div>
     <img src="../Images/X.png" alt="" id="img-exit-settings">
+    <script type="text/javascript" src="../Scripts/game_settings.js"></script>  
     <script type="text/javascript" src="../Scripts/home.js"></script>    
 </body>
 </html>
