@@ -3,7 +3,9 @@ async function Load() {
     loadLocalSettings();
 }
 
-Load();
+$(document).ready(function() {
+    Load(); 
+});
 
 $(document).on("click", "input", function() {
     var song_type = $(this).attr("class");

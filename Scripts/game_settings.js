@@ -33,62 +33,65 @@ var settings = [
 ];
 
 
-function createSettings() {
-    $(document).ready(function() {
-        for (let i = 0; i < 4; i++) {
-            $("<div>", {
-                "class": "group-box",
-                "id": "group-box--" + groups[i][0],
-            }).appendTo("#panel-box");
+async function createSettings() {
+    return new Promise((resolve, reject) => {
+        $(document).ready(function() {
+            for (let i = 0; i < 4; i++) {
+                $("<div>", {
+                    "class": "group-box",
+                    "id": "group-box--" + groups[i][0],
+                }).appendTo("#panel-box");
 
-            $("<div>", {
-                "class": "option-box option-box--main",
-                "id": "option-box--"+groups[i][0]
-            }).appendTo("#group-box--"+groups[i][0]);
-            
-            $("<img>", {
-                "src": "../Images/Icons/"+ groups[i][0]+".png", 
-                "alt": "", 
-                "id": groups[i][0]+"_img", 
-                "class": "option_image option_image--main"
-            }).appendTo("#option-box--"+groups[i][0]);
+                $("<div>", {
+                    "class": "option-box option-box--main",
+                    "id": "option-box--"+groups[i][0]
+                }).appendTo("#group-box--"+groups[i][0]);
+                
+                $("<img>", {
+                    "src": "../Images/Icons/"+ groups[i][0]+".png", 
+                    "alt": "", 
+                    "id": groups[i][0]+"_img", 
+                    "draggable": "false",
+                    "class": "option_image option_image--main"
+                }).appendTo("#option-box--"+groups[i][0]);
 
-            $("<div>", {
-                "class": "group-settings-box"
-            }).appendTo("#group-box--"+groups[i][0]);
-            
-            $('<p class="option_text">Sub-units:</p>').appendTo(".group-settings-box:last");
-            $('<div class="subunit-box"></div>').appendTo(".group-settings-box:last");
-            
-            for (let j = 0; j < 3; j++) {
-                $('<div class="option-box option-box--subunit"><img src="../Images/Icons/'+ groups[i][j+1]+'.png" alt="" id="'+ groups[i][j+1]+'_img" class="option_image"></div>').appendTo(".subunit-box:last")
+                $("<div>", {
+                    "class": "group-settings-box"
+                }).appendTo("#group-box--"+groups[i][0]);
+                
+                $('<p class="option_text">Sub-units:</p>').appendTo(".group-settings-box:last");
+                $('<div class="subunit-box"></div>').appendTo(".group-settings-box:last");
+                
+                for (let j = 0; j < 3; j++) {
+                    $('<div class="option-box option-box--subunit"><img src="../Images/Icons/'+ groups[i][j+1]+'.png" draggable="false" alt="" id="'+ groups[i][j+1]+'_img" class="option_image"></div>').appendTo(".subunit-box:last")
+                }
+                
+                if(i!=3){ //If the group isnt liella skip
+                    $('<div class="option-box option-box--subunit"><img src="../Images/Icons/'+ groups[i][4]+'.png" draggable="false" alt="" id="'+ groups[i][4]+'_img" class="option_image"></div>').appendTo(".group-settings-box:last")
+                }
+
+                $('<div class="subunit-box"></div>').appendTo(".group-settings-box:last");
+
+                if(i==2){ //nijigasaki has a different display
+                    createNijigasakiSettings();
+                    continue;
+                }
+
+                $("<div>", {
+                    "class": "option-box solo-box",
+                }).appendTo(".subunit-box:last");
+
+                $('<input type="checkbox" id="'+groups[i][0]+'-solo" class="solo"><p class="label--solo">Solo Songs</p>').appendTo(".solo-box:last");
+
+                $("<div>", {
+                    "class": "option-box solo-box",
+                }).appendTo(".subunit-box:last");
+
+                $('<input type="checkbox" id="'+groups[i][0]+'-other" class="other"><p class="label--other">Other Songs</p>').appendTo(".solo-box:last");
+                
             }
-            
-            if(i!=3){ //If the group isnt liella skip
-                $('<div class="option-box option-box--subunit"><img src="../Images/Icons/'+ groups[i][4]+'.png" alt="" id="'+ groups[i][4]+'_img" class="option_image"></div>').appendTo(".group-settings-box:last")
-            }
-
-            $('<div class="subunit-box"></div>').appendTo(".group-settings-box:last");
-
-            if(i==2){ //nijigasaki has a different display
-                createNijigasakiSettings();
-                continue;
-            }
-
-            $("<div>", {
-                "class": "option-box solo-box",
-            }).appendTo(".subunit-box:last");
-
-            $('<input type="checkbox" id="'+groups[i][0]+'-solo" class="solo"><p class="label--solo">Solo Songs</p>').appendTo(".solo-box:last");
-
-            $("<div>", {
-                "class": "option-box solo-box",
-            }).appendTo(".subunit-box:last");
-
-            $('<input type="checkbox" id="'+groups[i][0]+'-other" class="other"><p class="label--other">Other Songs</p>').appendTo(".solo-box:last");
-            
-        }
-
+            resolve();
+        })
     });
 }
 
@@ -98,7 +101,7 @@ function createNijigasakiSettings(){
             "class": "nijigasaki-option",
             "id": groups[2][5][j],
         }).appendTo(".subunit-box:last");
-        $('<img src="../Images/Icons/'+groups[2][5][j]+'.png" alt="" id="'+groups[2][5][j]+'_img" class="nijigasaki-solo_image">').appendTo(".nijigasaki-option:last");
+        $('<img src="../Images/Icons/'+groups[2][5][j]+'.png" draggable="false" alt="" id="'+groups[2][5][j]+'_img" class="nijigasaki-solo_image">').appendTo(".nijigasaki-option:last");
     }
 }
 
@@ -109,13 +112,13 @@ function loadLocalSettings() {
     }else{
         settings = JSON.parse(localStorage.getItem('localSettings'))
     }
+    console.table(settings);
 
     for (let i = 0; i < 4; i++) { 
         if(i == 2){ //loading all groups except nijigasaki
             continue;
         } 
         settings[i].forEach((name, index) => {
-            //console.table(settings)
             if(name == 0){
                 $("#"+groups[i][index].toString()+"_img").css("filter", "brightness(50%)");
             }else if (name == 1 && (groups[i][index] == "other" || groups[i][index] == "solo") ){

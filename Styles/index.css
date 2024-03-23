@@ -73,6 +73,7 @@ header{
 }
 
 #panel-box{
+    user-select: none; 
     display: none;
     position: fixed;
     z-index: 3;
