@@ -113,11 +113,12 @@ function loadLocalSettings() {
         settings = JSON.parse(localStorage.getItem('localSettings'))
     }
     console.table(settings);
-
+    
     for (let i = 0; i < 4; i++) { 
         if(i == 2){ //loading all groups except nijigasaki
             continue;
         } 
+        
         settings[i].forEach((name, index) => {
             if(name == 0){
                 $("#"+groups[i][index].toString()+"_img").css("filter", "brightness(50%)");
