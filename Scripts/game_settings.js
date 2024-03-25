@@ -32,11 +32,13 @@ var settings = [
     ]
 ];
 
-
+//Create all the DOM elements in settings
 async function createSettings() {
     return new Promise((resolve, reject) => {
         $(document).ready(function() {
             for (let i = 0; i < 4; i++) {
+                //Create the group-box, four groups so four boxes
+                //main unit
                 $("<div>", {
                     "class": "group-box",
                     "id": "group-box--" + groups[i][0],
@@ -55,6 +57,7 @@ async function createSettings() {
                     "class": "option_image option_image--main"
                 }).appendTo("#option-box--"+groups[i][0]);
 
+                //group settings
                 $("<div>", {
                     "class": "group-settings-box"
                 }).appendTo("#group-box--"+groups[i][0]);
@@ -62,14 +65,17 @@ async function createSettings() {
                 $('<p class="option_text">Sub-units:</p>').appendTo(".group-settings-box:last");
                 $('<div class="subunit-box"></div>').appendTo(".group-settings-box:last");
                 
+                //Subunit images
                 for (let j = 0; j < 3; j++) {
                     $('<div class="option-box option-box--subunit"><img src="../Images/Icons/'+ groups[i][j+1]+'.png" draggable="false" alt="" id="'+ groups[i][j+1]+'_img" class="option_image"></div>').appendTo(".subunit-box:last")
                 }
                 
-                if(i!=3){ //If the group isnt liella skip
+                if(i!=3){ //If the group is liella skip
+                    //Create the "rivals" unit
                     $('<div class="option-box option-box--subunit"><img src="../Images/Icons/'+ groups[i][4]+'.png" draggable="false" alt="" id="'+ groups[i][4]+'_img" class="option_image"></div>').appendTo(".group-settings-box:last")
                 }
 
+                //Create the "solo" and "other" options box 
                 $('<div class="subunit-box"></div>').appendTo(".group-settings-box:last");
 
                 if(i==2){ //nijigasaki has a different display
@@ -77,12 +83,14 @@ async function createSettings() {
                     continue;
                 }
 
+                //Solo box part
                 $("<div>", {
                     "class": "option-box solo-box",
                 }).appendTo(".subunit-box:last");
 
                 $('<input type="checkbox" id="'+groups[i][0]+'-solo" class="solo"><p class="label--solo">Solo Songs</p>').appendTo(".solo-box:last");
 
+                //Other box part
                 $("<div>", {
                     "class": "option-box solo-box",
                 }).appendTo(".subunit-box:last");
@@ -90,6 +98,13 @@ async function createSettings() {
                 $('<input type="checkbox" id="'+groups[i][0]+'-other" class="other"><p class="label--other">Other Songs</p>').appendTo(".solo-box:last");
                 
             }
+            $("<div>", {
+                "class": "button-box",
+            }).appendTo("#panel-box");
+            
+            $('<div class="button" id="button_reset"><p class="button-text">Reset</p></div>').appendTo(".button-box:first");
+            $('<div class="button" id="button_save"><p class="button-text">Save</p></div>').appendTo(".button-box:first");
+
             resolve();
         })
     });
@@ -97,6 +112,7 @@ async function createSettings() {
 
 function createNijigasakiSettings(){
     for (let j = 0; j < 12; j++) {
+        //Create the 12 nijigasaki solo song option
         $("<div>", {
             "class": "nijigasaki-option",
             "id": groups[2][5][j],
@@ -105,14 +121,12 @@ function createNijigasakiSettings(){
     }
 }
 
-
 function loadLocalSettings() {
     if (localStorage.getItem("localSettings") === null) { //get settings from localstorage
         localStorage.setItem('localSettings', JSON.stringify(settings));
     }else{
         settings = JSON.parse(localStorage.getItem('localSettings'))
     }
-    console.table(settings);
     
     for (let i = 0; i < 4; i++) { 
         if(i == 2){ //loading all groups except nijigasaki
@@ -120,6 +134,7 @@ function loadLocalSettings() {
         } 
         
         settings[i].forEach((name, index) => {
+            //Darkening the disabled options
             if(name == 0){
                 $("#"+groups[i][index].toString()+"_img").css("filter", "brightness(50%)");
             }else if (name == 1 && (groups[i][index] == "other" || groups[i][index] == "solo") ){
@@ -142,7 +157,6 @@ function loadLocalSettings() {
 }
 
 
-
 function updateGroupSettings(set){
     settings[set[0]][set[1]] = settings[set[0]][set[1]]?0:1
     localStorage.setItem('localSettings', JSON.stringify(settings));
@@ -153,6 +167,7 @@ function updateNijigasakiSoloSettings(index) {
     localStorage.setItem('localSettings', JSON.stringify(settings));
 }
 
+//Update the settings when input box is checked
 function updateInputSettings(group_id, song_type) {
     var settingIndex = 0;
     for (let i = 0; i < groups[group_id].length; i++) {
@@ -164,6 +179,7 @@ function updateInputSettings(group_id, song_type) {
     localStorage.setItem('localSettings', JSON.stringify(settings));
 }
 
+//Returns the values from group and subunit
 function getGroupSetting(group_name){
     var group_setting = [];
     for (let i = 0; i < 4; i++) {

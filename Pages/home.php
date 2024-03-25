@@ -23,10 +23,11 @@
         <div id="panel-box">
                 
                 
+            
         </div>
 
 
-        <div id="button-box">
+        <div class="button-box">
             <div class="button" id="button-settings"><p class="button-text">Settings</p></div>
             <div class="button"><p class="button-text">Start</p></div>
         </div>

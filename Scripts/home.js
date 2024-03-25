@@ -42,22 +42,15 @@ $(document).on("click", ".nijigasaki-option", function() {
     }
     
     updateNijigasakiSoloSettings(niji_id);
-    console.table(settings);
 });
 
-/*
-$("input").on("click", function() {
-    
-});
+function fadeOutSettings(){
+    $('#panel-box').fadeOut(0);
+    $('#img-exit-settings').fadeOut(0);
+    $('.settings-background').fadeOut(0);
+    $('#panel-box').css("display","none");
+}
 
-$(".option_image").on("click", function() {
-    
-});
-
-$(".nijigasaki-option").on("click", function() {
-    
-});
-*/
 
 $("#button-settings").on( "click", function() {
     $('#panel-box').fadeIn(500);
@@ -66,18 +59,13 @@ $("#button-settings").on( "click", function() {
     $('#panel-box').css("display","flex");
 });
 
-$("#img-exit-settings").on( "click", function() {
-    $('#panel-box').fadeOut(0);
-    $('#img-exit-settings').fadeOut(0);
-    $('.settings-background').fadeOut(0);
-    $('#panel-box').css("display","none");
+$(document).on("click", "#img-exit-settings, .settings-background, #button_save", function() {
+    fadeOutSettings();
 });
+
 
 $(document).keyup(function(e) {
     if (e.key === "Escape") { 
-        $('#panel-box').fadeOut(0);
-        $('#img-exit-settings').fadeOut(0);
-        $('.settings-background').fadeOut(0);
-        $('#panel-box').css("display","none");
+        fadeOutSettings();
    }
 });
