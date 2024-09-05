@@ -1,6 +1,7 @@
 async function Load() {
     await createSettings();
     loadLocalSettings();
+    console.table(settings);
 }
 
 $(document).ready(function() {
@@ -51,7 +52,6 @@ function fadeOutSettings(){
     $('#panel-box').css("display","none");
 }
 
-
 $("#button-settings").on( "click", function() {
     $('#panel-box').fadeIn(500);
     $('#img-exit-settings').fadeIn(500);
@@ -62,6 +62,23 @@ $("#button-settings").on( "click", function() {
 $(document).on("click", "#img-exit-settings, .settings-background, #button_save", function() {
     fadeOutSettings();
 });
+
+$(document).on("click", "#button_reset", function() {
+    resetSettings(settings);
+    console.table(settings);
+    localStorage.setItem("localSettings", JSON.stringify(settings));
+    loadLocalSettings();
+});
+
+function resetSettings(settings) {
+    settings.forEach(function(item, index) {
+        if (Array.isArray(item)) {
+            resetSettings(item); // recursive call for the nijigasaki solos sub array
+        } else {
+            settings[index] = 1;
+        }
+    });
+}
 
 
 $(document).keyup(function(e) {

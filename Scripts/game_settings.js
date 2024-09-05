@@ -98,6 +98,8 @@ async function createSettings() {
                 $('<input type="checkbox" id="'+groups[i][0]+'-other" class="other"><p class="label--other">Other Songs</p>').appendTo(".solo-box:last");
                 
             }
+
+            //create the reset and save buttons
             $("<div>", {
                 "class": "button-box",
             }).appendTo("#panel-box");
@@ -132,7 +134,6 @@ function loadLocalSettings() {
         if(i == 2){ //loading all groups except nijigasaki
             continue;
         } 
-        
         settings[i].forEach((name, index) => {
             //Darkening the disabled options
             if(name == 0){
